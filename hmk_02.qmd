@@ -1,0 +1,14 @@
+---
+title: "hmk_02"
+format: gfm
+editor: visual
+---
+
+# Homework 2
+
+#### Ainsley King
+
+
+1. What were the main issues in the Reinhard and Rogoff issue, and how best could they have been avoided?
+
+Reinhart and Rogoff were attempting to analyze data from many different countries to find a correlation between a country's debt and their economic growth. They concluded from their data analysis that economic growth slows when a country’s debt rises to more than 90% of the GDP. However, it was later found that the analysis accidentally omitted some of the data, which would have significantly altered the finding. They were doing their analysis in excel, and failed to select some of the rows of their document. Their 90% figure had been widely cited by economists and politicians at that point, and impacted policy making. This issue could have been avoided if Reinhart and Rogoff had been more careful about checking their analysis while they were performing it, to make sure it was reproducible. Furthermore, they should have had outside parties checking and attempting to reproduce their work. Finally, their mistake would have been caught much earlier if they had been completely transparent about what exact data they used and what analyses they did. Publishing all of their data would have allowed other independent people to check their analysis, and discover their mistake.
