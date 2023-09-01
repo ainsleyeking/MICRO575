@@ -1,11 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
-# hmk_02
-
 # Homework 2
 
 #### Ainsley King
