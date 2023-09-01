@@ -27,7 +27,7 @@ to check their analysis, and discover their mistake.
 Please put those attributes in a prioritized list (i.e., for you, what
 is most important, next most important, etc...)
 
-```         
+       
 1.  I think the most important thing for making data reproducible is
     proper documentation of your work. You need to keep track of
     exactly what data was used for your analysis, exactly what
@@ -46,7 +46,7 @@ is most important, next most important, etc...)
     wants to view it. This way, anyone will be able to attempt to
     reproduce your results, and any confusion or mistakes can be
     resolved quickly.
-```
+
 
 **3. Imagine that you are doing a piece of data analysis that only you
 will ever see: perhaps you are shopping for a car and trying to
