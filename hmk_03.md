@@ -27,16 +27,22 @@ function.
 
 1.  Use the `c()` function to create a vector of numbers.
 
-    vector.of.numbers \<- c(2.1, 3.7, 9.9, 5,0, 4.8)
+``` r
+vector.of.numbers <- c(2.1, 3.7, 9.9, 5,0, 4.8)
+```
 
 2.  Use the `c()` function to create a vector of characters.
 
-    vector.of.characters \<- c(“a”, “b”, “c”, “d”, “e”)
+``` r
+vector.of.characters <- c("a", "b", "c", "d", "e")
+```
 
 3.  Use the `:` implicit function to create a vector of integers from 1
     to 10.
 
-    vector.of.integers \<- 1:10
+``` r
+    vector.of.integers <- 1:10
+```
 
 4.  Explain *why* the following code returns what it does. Also address
     whether you think this was a good decision on the part of the
@@ -50,7 +56,14 @@ v1 + v2
 
     [1] 2 4 6 5
 
-    This code is adding the two vectors v1 and v2 together. However,  v1 only has 3 numbers in it, while v2 has four. R deals with this by looping back around to the beginning of v1 and adding the last number of v2 to first number of v1. I do not think it was a good decision to design R this way, as it may prevent you from catching a mistake where your vectors contain different numbers of elements when they aren't supposed to. I think it would be better if R showed an error message when you attempt this.
+This code is adding the two vectors v1 and v2 together. However, v1 only
+has 3 numbers in it, while v2 has four. R deals with this by looping
+back around to the beginning of v1 and adding the last number of v2 to
+first number of v1. I do not think it was a good decision to design R
+this way, as it may prevent you from catching a mistake where your
+vectors contain different numbers of elements when they aren’t supposed
+to. I think it would be better if R showed an error message when you
+attempt this.
 
 5.  Explain what the following code does. It may be helpful to reference
     the answer to the previous question:
@@ -65,7 +78,9 @@ c(1, 5, 9) + 3
 
 6.  Remove (delete) every variable in your workspace.
 
-    rm(list=ls())
+``` r
+rm(list=ls())
+```
 
 ## Graphics
 
@@ -73,15 +88,26 @@ c(1, 5, 9) + 3
     option `message=FALSE` to suppress the messages that tidyverse
     prints when loaded. These messages are useful in the
 
+``` r
 library(tidyverse)
+library(palmerpenguins)
+```
 
 2.  Recreate the visualization of `body_mass_g` to `flipper_length_mm`,
     from the penguins data set, that is shown in question 8 of section
     2.2.5 of [R4DS](https://r4ds.hadley.nz/data-visualize).
 
-    ggplot(data=penguins, mapping = aes(x=flipper_length_mm,
-    y=body_mass_g ) ) + geom_point(mapping = aes(color=bill_depth_mm)) +
-    geom_smooth()
+``` r
+    ggplot(data=penguins, mapping = aes(x=flipper_length_mm, y=body_mass_g ) ) + geom_point(mapping = aes(color=bill_depth_mm)) + geom_smooth()
+```
+
+    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+    Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
+
+    Warning: Removed 2 rows containing missing values (`geom_point()`).
+
+![](hmk_03_files/figure-commonmark/unnamed-chunk-8-1.png)
 
 3.  Explain why each aesthetic is mapped at the level that it is (i.e.,
     at the global level, in the `ggplot()` function call, or at the geom
