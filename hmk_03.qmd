@@ -16,20 +16,17 @@ HINT: Remember that you can get help on any function by typing `?`(function name
 x <- (3*(4+2))
 ```
 
-
 2.  Calculate the product of `x` (from the above question) times π.
 
 ```{r}
 x*pi
 ```
 
-
 3.  Use the `getwd()` function to show your current working directory. Is that a good working directory, and what program do you think set it that way?
 
 ```{r}
 getwd()
 ```
-
 
 ## Vectors
 
@@ -69,13 +66,11 @@ c(1, 5, 9) + 3
 
 This code takes each of the numbers in the vector and adds 3 to it. It returns a new vector with the resulting numbers.
 
-
 6.  Remove (delete) every variable in your workspace.
 
 ```{r}
 rm(list=ls())
 ```
-
 
 ## Graphics
 
@@ -88,7 +83,9 @@ library(palmerpenguins)
 
 2.  Recreate the visualization of `body_mass_g` to `flipper_length_mm`, from the penguins data set, that is shown in question 8 of section 2.2.5 of [R4DS](https://r4ds.hadley.nz/data-visualize).
 
-```{r}
+```{r message=FALSE}
+library(tidyverse)
+library(palmerpenguins)
 ggplot(data=penguins, mapping = aes(x=flipper_length_mm, y=body_mass_g ) ) +
 geom_point(mapping = aes(color=bill_depth_mm)) + 
 geom_smooth()
