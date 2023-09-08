@@ -109,12 +109,12 @@ library(palmerpenguins)
     2.2.5 of [R4DS](https://r4ds.hadley.nz/data-visualize).
 
 ``` r
+library(tidyverse)
+library(palmerpenguins)
 ggplot(data=penguins, mapping = aes(x=flipper_length_mm, y=body_mass_g ) ) +
 geom_point(mapping = aes(color=bill_depth_mm)) + 
 geom_smooth()
 ```
-
-    `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
     Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).
 
