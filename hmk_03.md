@@ -11,17 +11,27 @@ function.
 1.  Create a variable called `x` and use it to store the result of the
     calculation `(3*(4+2)`.
 
-    x \<- (3\*(4+2))
+``` r
+x <- (3*(4+2))
+```
 
 2.  Calculate the product of `x` (from the above question) times π.
 
-    x\*pi
+``` r
+x*pi
+```
+
+    [1] 56.54867
 
 3.  Use the `getwd()` function to show your current working directory.
     Is that a good working directory, and what program do you think set
     it that way?
 
-    getwd()
+``` r
+getwd()
+```
+
+    [1] "/Users/ainsley/Documents/MICRO_575"
 
 ## Vectors
 
@@ -74,7 +84,8 @@ c(1, 5, 9) + 3
 
     [1]  4  8 12
 
-    This code takes each of the numbers in the vector and adds 3 to it. It returns a new vector with the resulting numbers.
+This code takes each of the numbers in the vector and adds 3 to it. It
+returns a new vector with the resulting numbers.
 
 6.  Remove (delete) every variable in your workspace.
 
@@ -98,7 +109,9 @@ library(palmerpenguins)
     2.2.5 of [R4DS](https://r4ds.hadley.nz/data-visualize).
 
 ``` r
-    ggplot(data=penguins, mapping = aes(x=flipper_length_mm, y=body_mass_g ) ) + geom_point(mapping = aes(color=bill_depth_mm)) + geom_smooth()
+ggplot(data=penguins, mapping = aes(x=flipper_length_mm, y=body_mass_g ) ) +
+geom_point(mapping = aes(color=bill_depth_mm)) + 
+geom_smooth()
 ```
 
     `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
@@ -107,7 +120,7 @@ library(palmerpenguins)
 
     Warning: Removed 2 rows containing missing values (`geom_point()`).
 
-![](hmk_03_files/figure-commonmark/unnamed-chunk-8-1.png)
+![](hmk_03_files/figure-commonmark/unnamed-chunk-11-1.png)
 
 3.  Explain why each aesthetic is mapped at the level that it is (i.e.,
     at the global level, in the `ggplot()` function call, or at the geom
