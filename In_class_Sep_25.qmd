@@ -1,0 +1,46 @@
+---
+title: "In_class_Sep_25"
+format: gfm
+editor: visual
+---
+
+1. Use read_csv() to read the data into a data frame. 
+
+```{r}
+eagle_nest_counts <- read.csv("fake_eagle_nest_counts.csv")
+```
+
+
+2. Would you describe this as a "tidy" data frame? Why or why not?
+
+This is not a tidy data frame, because they have each different region in its own column. Tidy data should have one column be one variable. In this instance, "region" should be one variable, and therefore, one column.
+
+3. If not, "pivot" it to be a tidy data frame. Remember to use the names_to and values_to arguments to generate a new data frame that has logical column names.
+
+```{r}
+eagles_longer <- eagle_nest_counts |>
+  pivot_longer(cols = !starts_with("year"),
+               names_to = "region",
+               values_to = "nests")
+```
+
+
+4.Make a scatter plot of the resulting data, showing the number of eagles' nests in each region by year. Add a linear trend line using geom_smooth(method="lm"). 
+
+
+```{r}
+ggplot(data = eagles_longer, mapping = aes(x = year, y = nests)) +
+  geom_point(mapping = aes(color = region)) +
+  geom_smooth(method = "lm", color="black") +
+  scale_color_brewer(palette = "Dark2")
+```
+
+```{r}
+library(tidyverse)
+install.packages("tidyr")
+library(dplyr)
+```
+
+
+
+
