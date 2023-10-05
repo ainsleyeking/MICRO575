@@ -36,7 +36,10 @@ LGA_short_16 <- flights |>
   filter(origin == "LGA" & day == 16 & distance < 2000, na.rm = TRUE)
 
 ggplot(data = LGA_short_16, mapping = aes(x = distance, y = air_time)) +
-  geom_point(color="chartreuse4")
+  theme_bw() +
+  geom_point(color="steelblue3", size = 2) +
+  geom_point(shape = "circle open", color = "steelblue4", size = 2) +
+  labs(x = "Distance (km)", y = "Air time (min)")
 ```
 
 ![](hmk_04_data_frames_files/figure-commonmark/unnamed-chunk-1-1.png)
@@ -79,6 +82,7 @@ avg_speed <- flights |>
     avg.speed = distance / air_time)
 
 ggplot(data = avg_speed, mapping = aes(x = avg.speed)) +
+         theme_bw() +
          geom_histogram(binwidth = 0.2, color="lightpink4", fill="lightpink") +
          labs(x = "Average Speed (km/min)", y = "Count", title = "Average Flight Speeds")
 ```
