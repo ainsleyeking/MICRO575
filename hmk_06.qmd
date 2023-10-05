@@ -1,10 +1,8 @@
 ---
-title: "hmk_06"
+title: "Homework 6"
 format: gfm
 editor: visual
 ---
-
-# Homework 6
 
 ## 1. A Successful Data Visualization
 

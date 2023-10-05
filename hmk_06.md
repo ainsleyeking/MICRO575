@@ -1,5 +1,3 @@
-# hmk_06
-
 # Homework 6
 
 ## 1. A Successful Data Visualization
