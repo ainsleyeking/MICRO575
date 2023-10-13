@@ -8,6 +8,8 @@ editor: visual
 
 ```{r}
 eagle_nest_counts <- read.csv("fake_eagle_nest_counts.csv")
+
+library(tidyverse)
 ```
 
 
@@ -16,6 +18,7 @@ eagle_nest_counts <- read.csv("fake_eagle_nest_counts.csv")
 This is not a tidy data frame, because they have each different region in its own column. Tidy data should have one column be one variable. In this instance, "region" should be one variable, and therefore, one column.
 
 3. If not, "pivot" it to be a tidy data frame. Remember to use the names_to and values_to arguments to generate a new data frame that has logical column names.
+
 
 ```{r}
 eagles_longer <- eagle_nest_counts |>
@@ -28,7 +31,7 @@ eagles_longer <- eagle_nest_counts |>
 4.Make a scatter plot of the resulting data, showing the number of eagles' nests in each region by year. Add a linear trend line using geom_smooth(method="lm"). 
 
 
-```{r}
+```{r, message=FALSE}
 ggplot(data = eagles_longer, mapping = aes(x = year, y = nests)) +
   geom_point(mapping = aes(color = region)) +
   geom_smooth(method = "lm", color="black") +
@@ -36,11 +39,8 @@ ggplot(data = eagles_longer, mapping = aes(x = year, y = nests)) +
 ```
 
 ```{r}
-library(tidyverse)
-install.packages("tidyr")
-library(dplyr)
+library(tidyr)
 ```
-
 
 
 
